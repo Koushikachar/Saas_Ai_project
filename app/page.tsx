@@ -1,13 +1,13 @@
 import CompanionsList from "@/components/CompanionsList";
 import CompanionCard from "@/components/CompanionCard";
 import Cta from "@/components/CTA";
-import { recentSessions } from "@/constants";
-import React from "react";
+
 import {
   getAllCompanions,
   getRecentSessions,
 } from "@/lib/actions/companion.action";
 import { getSubjectColor } from "@/lib/utils";
+export const dynamic = "force-dynamic";
 
 const Page = async () => {
   const companions = await getAllCompanions({ limit: 3 });
